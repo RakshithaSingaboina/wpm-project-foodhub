@@ -58,9 +58,6 @@ block content
                 p !{(review.reviewText).replace(/\n/g, '<br/>')}
 
     .col-12.col-lg-3
+      p.lead #{location.name} #{sidebar.context}
      
-      // New section to display Gmail and phone number
-      p Contact Us:
-        | Gmail: #{location.gmail} 
-        | Phone: #{location.phno}
       p= sidebar.callToAction

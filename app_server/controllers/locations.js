@@ -139,7 +139,7 @@ const locations = [
       { author: 'Kavya ', rating: 4, timestamp: '2023-09-05', reviewText: 'Food delivery was quick, and everything arrived fresh and hot!' }
     ],
     mapUrl: 'https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana',
-    imageSrc: '/images/img6.jpeg',
+    imageSrc: '/images/img6.jpg',
     gmail: 'gourmetkitchen@gmail.com',
     phno: '9876543216'
   },
@@ -170,7 +170,9 @@ const locationInfo = (req, res) => {
   res.render('location-info', {
     title: location.name,
     pageHeader: { title: location.name },
-    sidebar: `To Contact Us:\nGmail: ${location.gmail}\nPhone: ${location.phno}`,
+    sidebar: 
+    {
+      context:`To Contact Us:\nGmail: ${location.gmail}\nPhone: ${location.phno}`},
     location: location
   });
 };
